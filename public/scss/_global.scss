@@ -1,0 +1,110 @@
+//
+// color
+//
+$blue: #2c97de;
+$wh: #ffffff;
+$black: #212121;
+$grey-dark: #484848;
+$black-popup: #262626;
+$blue-popup-border: #2979b2;
+
+$c-tabs-title: #bdbdbd;
+$c-table-text: #747575;
+$c-table-border: #303030;
+$c-table-input-hover: #353535;
+$c-table-red: #b13a47;
+$c-table-green: #84b547;
+//
+// width
+//
+
+//
+// text
+//
+
+$text: 'Helvetica', sans-serif;
+
+
+//
+// padding & margin
+//
+
+
+//
+// mixin
+//
+
+
+//
+// media
+//
+$xs: 400px;
+$sm: 640px;
+$md: 970px;
+$lg: 1170px;
+$xl: 1366px;
+
+
+
+@mixin responsive($media) {
+
+	@if $media == mobile-xs {
+    	@media only screen and (max-width: $xs - 1) { @content; }
+  	}
+    @else if $media == mobile-xs-up {
+      @media only screen and (min-width: $xs + 1) { @content; }
+    }
+
+// sm
+    @else if $media == mobile {
+      @media only screen and (min-width: $xs + 1) and (max-width: $sm - 1) { @content; }
+    }
+    @else if $media == mobile-down {
+      @media only screen and (max-width: $sm - 1) { @content; }
+    }
+    @else if $media == mobile-up {
+      @media only screen and (min-width: $sm + 1) { @content; }
+    }
+// end sm
+// tablet
+    @else if $media == tablet {
+      @media only screen and (min-width: $sm + 1) and (max-width: $md - 1) { @content; }
+    }
+    @else if $media == tablet-down {
+      @media only screen and (max-width: $md - 1) { @content; }
+    }
+    @else if $media == tablet-up {
+      @media only screen and (min-width: $md + 1) { @content; }
+    }
+//end tablet
+// md
+    @else if $media == medium {
+      @media only screen and (min-width: $md + 1) and (max-width: $lg - 1) { @content; }
+    }
+    @else if $media == medium-down {
+      @media only screen and (max-width: $lg - 1) { @content; }
+    }
+    @else if $media == medium-up {
+      @media only screen and (min-width: $lg + 1) { @content; }
+    }
+//end md
+// lg
+    @else if $media == large {
+      @media only screen and (min-width: $lg + 1) and (max-width: $xl - 1) { @content; }
+    }
+    @else if $media == large-down {
+      @media only screen and (max-width: $xl - 1) { @content; }
+    }
+    @else if $media == large-up {
+      @media only screen and (min-width: $xl + 1) { @content; }
+    }
+//end lg
+    @else if  $media == large-xl-down {
+      @media only screen and (max-width: $xl - 1) { @content; }
+    }
+    @else if $media == large-xl-up {
+      @media only screen and (min-width: $xl + 1) { @content; }
+    }
+
+    
+}

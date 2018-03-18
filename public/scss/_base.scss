@@ -1,0 +1,19 @@
+html {
+	font-family: $text;
+	font-size: 16px;
+}
+img {max-width: 100%;}
+
+.wrap {
+	max-width: 1480px;
+	min-width: 320px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+@font-face {
+	font-family: "Helvetica";
+	src: url("../fonts/HelveticaRegular.ttf") format("truetype");
+	src: url("../fonts/HelveticaRegular.woff") format("woff");
+}

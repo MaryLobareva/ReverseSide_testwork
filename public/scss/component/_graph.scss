@@ -1,0 +1,7 @@
+.graph {
+	margin-top: 2rem;
+	& .highcharts-color-undefined text{
+		font-family: $text;
+	}
+	& .highcharts-legend-item.highcharts-area-series.highcharts-color-undefined text{ fill: $wh!important;}
+}

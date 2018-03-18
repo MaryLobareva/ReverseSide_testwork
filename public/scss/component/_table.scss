@@ -1,0 +1,265 @@
+.table {
+	margin-top: 2rem;
+	border: 1px solid $c-table-border;
+	border-collapse: collapse;
+	overflow: auto;
+	& th, & td {
+		border: 1px solid $c-table-border;
+		overflow: hidden;
+		box-sizing: border-box;
+	} 
+	& th {
+		padding: .5rem .25rem;
+		color: $c-table-text;
+		font-size: .9rem;
+	}
+	& td {
+		padding: .5rem;
+	}
+	& .thead {
+		&-2 {
+			& .icon {
+				color: $blue;
+				float: right;
+			}
+		}
+		&-4,
+		&-6,
+		&-7,
+		&-8,
+		&-9,
+		&-11 {
+			& .flex {
+				@include display-flex;
+				@include justify-content(space-between);
+				& .icon {
+					transform: rotate(90deg);
+					float: right;
+					color: $c-table-border;
+				}
+			}
+		}
+	}
+	.filter {
+			&-interval {
+				min-width: 4.5rem;
+				&-input {
+					position: relative;
+					width: calc(50% - .1rem);
+					float: left;
+					&:first-child {margin-right: .2rem;}
+					& .icon {
+						color: $c-table-text;
+						font-size: .4rem;
+						position: absolute;
+						left: .25rem;
+						top: 40%;
+					}
+					div & input {
+						width: 100%;
+						padding-left: .7rem;
+						&:first-child {margin-right: 0rem;}
+					}
+				}
+				& input {
+					width: calc(50% - .1rem);
+					float: left;
+					&:first-child {margin-right: .2rem;}
+				}
+			}
+			&-all {
+				position: relative;
+				& input {
+					font-family: "FontAwesome";
+					max-width: 3rem;
+				}
+				&::before {
+					position: absolute;
+					right: .9rem;
+					font-family: "FontAwesome";
+					content: "\f0dc";
+					color: $c-table-text;
+					margin-top: .25rem;
+					margin-top: .5rem;
+    				font-size: 0.6rem;
+				}
+			}
+			&-search {
+				min-width: 15rem;
+				& input {width: 100%;}
+			}
+			&-item:not(.filter-interval) {
+				&:hover {
+					& > input {
+						background: $c-table-input-hover;
+						&::placeholder {
+							color: $wh;
+						}
+					}
+					&::before {color: $wh;}
+				}
+			}
+			&-item {
+				& input {
+					background: none;
+					border: 1px solid $c-table-border;
+					border-radius: 2px;
+					padding: .25rem;
+					color: $c-table-text;
+					transition: background .1s;
+					box-sizing: border-box;
+					font-size: .8rem;
+
+					&::placeholder {
+						font-family: $text;
+					}
+					&:focus {outline:none;}
+					&:hover {
+						background: $c-table-input-hover;
+						&::placeholder {
+							color: $wh;
+						}
+					}
+				}
+				
+			}
+			&-last {
+				position: relative;
+				& .icon {
+					position: absolute;
+					&-filter {
+						color: $c-tabs-title;
+						font-size: 1.2rem;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						left: .25rem;
+					}
+					&-close {
+						color: $c-table-red;
+						font-size: .7em;
+						position: absolute;
+						top: 45%;
+						right: .25rem;
+					}
+				}
+			}
+		}
+		.general {
+			&-item {
+				.grey {color: $c-table-text;}
+				.red {color: $c-table-red;}
+				.blue {color: $blue;}
+				.icon-ban {
+					color: $c-table-text;
+					display: block;
+					text-align: center;
+				}
+			} 
+			&-2 {
+				& span {
+					margin-bottom: .25rem;
+					display: block;
+				} 
+			}
+			&-3 {
+				& .icon-check {
+					color: $c-table-green;
+					text-align: center;
+				    display: block;
+				    font-size: 1.5rem;
+				}
+			}
+			&-4 {
+				position: relative;
+				& img {
+					width: 3rem;
+					height: 3rem;
+					border-radius: 50%;
+					float: left;
+					margin-right: .5rem;
+				}
+				& .text {
+					color: $blue;
+					font-size: .8rem;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					line-height: 1.1;
+				}
+				& .icon {
+					font-size: .7rem;
+					color: $c-table-text;
+					position: absolute;
+					right: .5rem;
+					bottom: .5rem;
+				}
+			}
+			&-5 {
+				position: relative;
+				overflow: visible;
+				& .icon {
+					color: $c-table-text;
+					display: block;
+					text-align: center;
+					font-size: 1.2rem;
+				}
+				&:hover {
+					& .icon { & + .prompt {display: block;} }
+				}
+				.prompt {
+					display: none;
+					position: absolute;
+					top: -.5rem;
+    				left: -70%;
+					padding: .25rem;
+					background: $c-table-input-hover;
+					font-size: .75rem;
+					min-width: 9rem;
+					text-align: center;
+					border-radius: 2px;
+					&::before {
+						content:'';
+						display: block;
+						border: 8px solid transparent;	
+						border-top: 8px solid  $c-table-input-hover;;
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%);
+						top: 1.2rem;
+
+					}
+					&-text {
+						color: $wh;
+					}
+				}
+			}
+			&-7 {
+				& .like,
+				& .share,
+				& .chat {
+					width: 50%;
+					display: block;
+					margin: 0 auto .25rem;
+					@include display-flex;
+					@include justify-content(center);
+				}
+		
+				& .share,
+				& .chat {
+					float: left;
+				}
+				& .icon {margin-right: .25rem;}
+				& .icon,
+				& .num {color: $blue;}
+			}
+			&-12 {
+				& .icon {
+					font-size: 1.2rem;
+					color: $blue;
+					display: block;
+					text-align: center;
+				}
+			} 
+		}
+}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test work</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="lib/datatables.min.css">
+</head>
+<body>
+	<main class="main">
+		<div class="wrap popUp-wrap">
+			<div class="popUp-open">
+				<p class="text"><i class="fa fa-info-circle icon" aria-hidden="true"></i>Показать модальное окно</p>
+				<button class="btn" data-popup-open>открыть</button>
+			</div>
+		</div>
+	</main>
+	<div class="wrap popUp-body" data-popup-body>
+		<div class="popUp" data-popup>
+			<i class="fa fa-times popUp-close" aria-hidden="true" data-popup-close></i>
+			<span class="title">Аналитика по площадкам</span>
+			<div class="popUp-container">
+				<div class="container">
+					<ul class="tabs">
+						<li class="tabs-link open" data-tab="tab-1">Таблица</li>
+						<li class="tabs-link" data-tab="tab-2">График</li>
+					</ul>
+
+					<div id="tab-1" class="tabs-cont open">
+						<span class="title">Аналитика данных в таблице</span>
+						<div class="table">
+							<table id="table" class="display">
+							    <thead>
+							        <tr class="thead">
+							            <th class="thead-item thead-1">Preview</th>
+							            <th class="thead-item thead-2">Время 
+							            	<i class="icon fa fa-sort-amount-asc" aria-hidden="true"></i>
+							            </th>
+							            <th class="thead-item thead-3">Статус</th>
+							            <th class="thead-item thead-4">
+							           		<div class="flex">
+							            		Плошадка
+							            		<i class="icon fa fa-exchange" aria-hidden="true"></i>
+							            	</div>
+							            </th>
+							            <th class="thead-item thead-5">Тип</th>
+							            <th class="thead-item thead-6">
+								            <div class="flex">
+								            	Цена
+								            	<i class="icon fa fa-exchange" aria-hidden="true"></i>
+								            </div>
+							            </th>
+							            <th class="thead-item thead-7">
+								            <div class="flex">
+								            	Активность
+								            	<i class="icon fa fa-exchange" aria-hidden="true"></i>
+								            </div>
+							            </th>
+							            <th class="thead-item thead-8">
+								            <div class="flex">
+								            	Подписки
+								            	<i class="icon fa fa-exchange" aria-hidden="true"></i>
+								            </div>
+							            </th>
+							            <th class="thead-item thead-9">
+								            <div class="flex">							            	
+								            	Пол
+								            	<i class="icon fa fa-exchange" aria-hidden="true"></i>
+								            </div>
+							            </th>
+							            <th class="thead-item thead-10">Возраст</th>
+							            <th class="thead-item thead-11">
+								            <div class="flex">
+								            	CPA
+								            	<i class="icon fa fa-exchange" aria-hidden="true"></i>
+								            </div>
+							            </th>
+							            <th class="thead-item thead-12"></th>
+							        </tr>
+							    </thead>
+							    <tbody>
+							        <tr class="filter">
+							            <td></td>
+							            <td class="filter-item filter-interval">
+							            	<input type="text" placeholder="от">
+							            	<input type="text" placeholder="до">
+							            </td>
+							            <td class="filter-item filter-all">
+							            	<input type="text" placeholder="Все">
+							            </td>
+							            <td class="filter-item filter-search">
+							            	<input type="search"  placeholder="Поиск...">
+							            </td>
+							            <td class="filter-item filter-all">
+							            	<input type="text" placeholder="Тип">
+							            </td>
+							            <td class="filter-item filter-interval">
+							            	<input type="text" placeholder="от">
+							            	<input type="text" placeholder="до">
+							            </td>
+							            <td class="filter-item filter-interval">
+								            <div class="filter-interval-input">
+								            	<i class="icon fa fa-heart" aria-hidden="true"></i>
+								            	<input type="text" placeholder="от">
+								            </div>
+								            <div class="filter-interval-input">
+								            	<i class="icon fa fa-heart" aria-hidden="true"></i>
+								            	<input type="text" placeholder="до">
+								            </div>
+							            </td>
+							            <td class="filter-item filter-interval">
+							            	<input type="text" placeholder="от">
+							            	<input type="text" placeholder="до">
+							            </td>
+							            <td class="filter-item filter-interval">
+								             <div class="filter-interval-input">
+								            	<i class="icon fa fa-heart" aria-hidden="true"></i>
+								            	<input type="text" placeholder="от">
+								            </div>
+								             <div class="filter-interval-input">
+								            	<i class="icon fa fa-heart" aria-hidden="true"></i>
+								            	<input type="text" placeholder="до">
+								            </div>
+							            </td>
+							            <td class="filter-item filter-all">
+							            	<input type="text" placeholder="Все">
+							            </td>
+							            <td class="filter-item filter-interval">
+							            	<input type="text" placeholder="от">
+							            	<input type="text" placeholder="до">
+							            </td>
+							            <td class="filter-item filter-last">
+							            	<i class="fa fa-filter icon-filter" aria-hidden="true"></i>
+							            	<i class="fa fa-times icon-close" aria-hidden="true"></i>
+							            </td>
+							        </tr>
+							        <tr class="general">
+							            <td class="general-item general-1">
+							            	<img src="img/preview.jpg" alt="">
+							            </td>
+							            <td class="general-item general-2">
+							            	<span class="grey"> 16.06.17</span>
+							            	<span class="grey"> 16:10</span>
+							            </td>
+							            <td class="general-item general-3">
+							            	<i class="fa fa-check icon-check" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-4">
+							            	<img src="img/smile.jpg" alt="">
+							            	<span class="text">киноКайф-Лучшие фильмы</span>
+							            	<i class="fa fa-vk icon" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-5">
+							            	<i class="fa fa-info icon" aria-hidden="true"></i>
+							            	<div class="prompt">
+							            		<div class="prompt-text">Информационный пост</div>
+							            	</div>
+							            </td>
+							            <td class="general-item general-6">
+							            	<span class="grey">7 375p.</span>
+							            </td>
+							            <td class="general-item general-7">
+								            <div class="like">
+								            	<i class="fa fa-heart icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="share">
+								            	<i class="fa fa-bullhorn icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="chat">
+								            <i class="fa fa-comments icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+							            </td>
+							            <td class="general-item general-8">
+							            	<span class="red"> 2 987</span>
+							            </td>
+							            <td class="general-item general-9">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-10">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-11">
+							            	<span class="red">2.6 p.</span>
+							            </td>
+							            <td class="general-item general-12">
+							            	<i class="fa fa-info-circle icon" aria-hidden="true"></i>
+							            </td>
+							        </tr>
+							        <tr class="general">
+							            <td class="general-item general-1">
+							            	<img src="img/preview.jpg" alt="">
+							            </td>
+							            <td class="general-item general-2">
+							            	<span class="grey"> 16.06.17</span>
+							            	<span class="grey"> 16:10</span>
+							            </td>
+							            <td class="general-item general-3">
+							            	<i class="fa fa-check icon-check" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-4">
+							            	<img src="img/smile.jpg" alt="">
+							            	<span class="text">киноКайф-Лучшие фильмы</span>
+							            	<i class="fa fa-vk icon" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-5">
+							            	<i class="fa fa-info icon" aria-hidden="true"></i>
+							            	<div class="prompt">
+							            		<div class="prompt-text">Информационный пост</div>
+							            	</div>
+							            </td>
+							            <td class="general-item general-6">
+							            	<span class="grey">7 375p.</span>
+							            </td>
+							            <td class="general-item general-7">
+								            <div class="like">
+								            	<i class="fa fa-heart icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="share">
+								            	<i class="fa fa-bullhorn icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="chat">
+								            <i class="fa fa-comments icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+							            </td>
+							            <td class="general-item general-8">
+							            	<span class="red"> 2 987</span>
+							            </td>
+							            <td class="general-item general-9">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-10">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-11">
+							            	<span class="red">2.6 p.</span>
+							            </td>
+							            <td class="general-item general-12">
+							            	<i class="fa fa-info-circle icon" aria-hidden="true"></i>
+							            </td>
+							        </tr>
+							        <tr class="general">
+							            <td class="general-item general-1">
+							            	<img src="img/preview.jpg" alt="">
+							            </td>
+							            <td class="general-item general-2">
+							            	<span class="grey"> 16.06.17</span>
+							            	<span class="grey"> 16:10</span>
+							            </td>
+							            <td class="general-item general-3">
+							            	<i class="fa fa-check icon-check" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-4">
+							            	<img src="img/smile.jpg" alt="">
+							            	<span class="text">киноКайф-Лучшие фильмы</span>
+							            	<i class="fa fa-vk icon" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-5">
+							            	<i class="fa fa-info icon" aria-hidden="true"></i>
+							            	<div class="prompt">
+							            		<div class="prompt-text">Информационный пост</div>
+							            	</div>
+							            </td>
+							            <td class="general-item general-6">
+							            	<span class="grey">7 375p.</span>
+							            </td>
+							            <td class="general-item general-7">
+								            <div class="like">
+								            	<i class="fa fa-heart icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="share">
+								            	<i class="fa fa-bullhorn icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="chat">
+								            <i class="fa fa-comments icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+							            </td>
+							            <td class="general-item general-8">
+							            	<span class="red"> 2 987</span>
+							            </td>
+							            <td class="general-item general-9">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-10">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-11">
+							            	<span class="red">2.6 p.</span>
+							            </td>
+							            <td class="general-item general-12">
+							            	<i class="fa fa-info-circle icon" aria-hidden="true"></i>
+							            </td>
+							        </tr>
+							        <tr class="general">
+							            <td class="general-item general-1">
+							            	<img src="img/preview.jpg" alt="">
+							            </td>
+							            <td class="general-item general-2">
+							            	<span class="grey"> 16.06.17</span>
+							            	<span class="grey"> 16:10</span>
+							            </td>
+							            <td class="general-item general-3">
+							            	<i class="fa fa-check icon-check" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-4">
+							            	<img src="img/smile.jpg" alt="">
+							            	<span class="text">киноКайф-Лучшие фильмы</span>
+							            	<i class="fa fa-vk icon" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-5">
+							            	<i class="fa fa-info icon" aria-hidden="true"></i>
+							            	<div class="prompt">
+							            		<div class="prompt-text">Информационный пост</div>
+							            	</div>
+							            </td>
+							            <td class="general-item general-6">
+							            	<span class="grey">7 375p.</span>
+							            </td>
+							            <td class="general-item general-7">
+								            <div class="like">
+								            	<i class="fa fa-heart icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="share">
+								            	<i class="fa fa-bullhorn icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="chat">
+								            <i class="fa fa-comments icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+							            </td>
+							            <td class="general-item general-8">
+							            	<span class="red"> 2 987</span>
+							            </td>
+							            <td class="general-item general-9">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-10">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-11">
+							            	<span class="red">2.6 p.</span>
+							            </td>
+							            <td class="general-item general-12">
+							            	<i class="fa fa-info-circle icon" aria-hidden="true"></i>
+							            </td>
+							        </tr>
+							        <tr class="general">
+							            <td class="general-item general-1">
+							            	<img src="img/preview.jpg" alt="">
+							            </td>
+							            <td class="general-item general-2">
+							            	<span class="grey"> 16.06.17</span>
+							            	<span class="grey"> 16:10</span>
+							            </td>
+							            <td class="general-item general-3">
+							            	<i class="fa fa-check icon-check" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-4">
+							            	<img src="img/smile.jpg" alt="">
+							            	<span class="text">киноКайф-Лучшие фильмы</span>
+							            	<i class="fa fa-vk icon" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-5">
+							            	<i class="fa fa-info icon" aria-hidden="true"></i>
+							            	<div class="prompt">
+							            		<div class="prompt-text">Информационный пост</div>
+							            	</div>
+							            </td>
+							            <td class="general-item general-6">
+							            	<span class="grey">7 375p.</span>
+							            </td>
+							            <td class="general-item general-7">
+								            <div class="like">
+								            	<i class="fa fa-heart icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="share">
+								            	<i class="fa fa-bullhorn icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+								            <div class="chat">
+								            <i class="fa fa-comments icon" aria-hidden="true"></i>
+								            	<span class="num">1</span>
+								            </div>
+							            </td>
+							            <td class="general-item general-8">
+							            	<span class="red"> 2 987</span>
+							            </td>
+							            <td class="general-item general-9">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-10">
+							            	<i class="fa fa-ban icon-ban" aria-hidden="true"></i>
+							            </td>
+							            <td class="general-item general-11">
+							            	<span class="red">2.6 p.</span>
+							            </td>
+							            <td class="general-item general-12">
+							            	<i class="fa fa-info-circle icon" aria-hidden="true"></i>
+							            </td>
+							        </tr>
+
+							    </tbody>
+							</table>
+						</div>
+
+					</div>
+					<div id="tab-2" class="tabs-cont">
+						<span class="title">Аналитика данных в графике</span>
+							<div id="graph" class="graph" style="width:100%; height:400px;">
+							</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="lib/datatables.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<!--[if lt IE 9]>
+	<script src="https://code.highcharts.com/modules/oldie.js"></script>
+	<![endif]-->
+</body>
+</html>
